@@ -26,11 +26,12 @@ module.exports = {
         defaultValue: INITIATED,
         allowNull: false
       },
-      totalCost: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
       noOfSeats: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 1
+      },
+      totalCost: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
