@@ -6,9 +6,19 @@ const apiRoutes = require("./routes");
 
 const app = express();
 
-app.use("/api", apiRoutes);
+app.use(express.json());
+
+app.use('/api', apiRoutes);
 
 app.listen(ServerConfig.PORT, () => {
-  console.log(`Successfully started the server on PORT : ${ServerConfig.PORT}`);
-  Logger.info("Successfully started the server", "root", { msg: "something" });
+    console.log(`APP RUNNING ON PORT -> ${ServerConfig.PORT}`);
+    Logger.info( "Successfully Started Server",{} );
+});
+
+app.get("/", (req, res) => {
+    res.status(StatusCodes.OK).json(
+        {
+            "msg" : "Working"
+        }
+    );
 });

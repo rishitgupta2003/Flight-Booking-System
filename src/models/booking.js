@@ -1,4 +1,8 @@
 'use strict';
+
+const { BOOKING_STATUS } = require('../utils');
+const { BOOKED, CANCELLED, INITIATED, PENDING } = BOOKING_STATUS;
+
 const {
   Model
 } = require('sequelize');
