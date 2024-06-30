@@ -5,8 +5,6 @@ const { asyncHandler, ApiResponse, ApiError, compareTime } = require("../utils")
 const createBooking = asyncHandler(
     async (req, res) => {
         try{
-            console.log('inside controller');
-            console.log(req.body);
             const { flightId, userId, noOfSeats } = req.body;
             const result = await BookingService.createBooking(
                 {
