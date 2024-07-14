@@ -1,5 +1,5 @@
 const express = require("express");
-
+const { StatusCodes } = require("http-status-codes");
 const { ServerConfig, Logger } = require("./config");
 
 const apiRoutes = require("./routes");
