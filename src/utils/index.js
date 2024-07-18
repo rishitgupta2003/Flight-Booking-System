@@ -9,6 +9,6 @@ module.exports = {
     ApiResponse,
     asyncHandler,
     compareTime,
-    seatType,
-    BOOKING_STATUS
+    BOOKING_STATUS,
+    seatType
 }
